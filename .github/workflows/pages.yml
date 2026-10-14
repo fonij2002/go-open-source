@@ -38,8 +38,8 @@ jobs:
       - name: Validate data
         run: python scripts/validate.py
 
-      - name: Generate category READMEs
-        run: python scripts/generate.py
+      - name: Generate catalog READMEs
+        run: python scripts/generate_catalog.py
 
       - name: Build website
         run: python scripts/build_site.py

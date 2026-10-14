@@ -11,9 +11,8 @@ ui:
   github: GitHub
   theme: Toggle color theme
   language: Language
-  eyebrow: Open-source first
-  hero_title: Find an open-source alternative.
-  hero_copy: Discover open-source alternatives to the software you pay for.
+  hero_title: Can’t afford it? Run your own.
+  hero_copy: Open-source replacements you can actually install, run, and control.
   search_placeholder: Search Figma CapCut Photoshop Postman…
   search_label: Search alternatives
   mappings: mappings

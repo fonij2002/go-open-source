@@ -1,8 +1,7 @@
 (() => {
   "use strict";
 
-  const BUILD_ID =
-    document.querySelector('meta[name="kudos-build"]')?.content || "dev";
+  const BUILD_ID = document.querySelector('meta[name="kudos-build"]')?.content || "dev";
 
   const els = {
     search: document.querySelector("#search"),
@@ -10,7 +9,6 @@
     platform: document.querySelector("#platform-filter"),
     language: document.querySelector("#language-select"),
     results: document.querySelector("#results"),
-    resultCount: document.querySelector("#result-count"),
     clear: document.querySelector("#clear-filters"),
     empty: document.querySelector("#empty-state"),
     emptyClear: document.querySelector("#empty-clear"),
@@ -28,38 +26,40 @@
   let englishLocale = null;
   let currentLang = "en";
   let renderTimer = 0;
+
   const localeCache = new Map();
 
   const applauseLayout = [
-    { x: 4, y: 8, size: 82, rotate: -18 },
-    { x: 13, y: 4, size: 66, rotate: 18 },
-    { x: 25, y: 12, size: 56, rotate: -14 },
-    { x: 42, y: 8, size: 72, rotate: 15 },
-    { x: 57, y: 5, size: 48, rotate: -10 },
-    { x: 72, y: 10, size: 58, rotate: 15 },
-    { x: 85, y: 5, size: 80, rotate: 16 },
-    { x: 96, y: 9, size: 68, rotate: -13 },
-    { x: 3, y: 34, size: 88, rotate: -16 },
-    { x: 14, y: 28, size: 44, rotate: 18 },
-    { x: 29, y: 19, size: 58, rotate: -12 },
-    { x: 52, y: 20, size: 42, rotate: 11 },
-    { x: 70, y: 22, size: 50, rotate: -14 },
-    { x: 87, y: 19, size: 44, rotate: 14 },
-    { x: 98, y: 35, size: 60, rotate: -16 },
-    { x: 7, y: 64, size: 68, rotate: 14 },
-    { x: 20, y: 57, size: 40, rotate: -16 },
-    { x: 63, y: 62, size: 66, rotate: 13 },
-    { x: 78, y: 53, size: 42, rotate: -12 },
-    { x: 92, y: 68, size: 62, rotate: 16 },
-    { x: 4, y: 93, size: 62, rotate: -13 },
-    { x: 14, y: 87, size: 78, rotate: 17 },
-    { x: 27, y: 94, size: 45, rotate: -12 },
-    { x: 39, y: 97, size: 54, rotate: 13 },
-    { x: 53, y: 90, size: 72, rotate: -17 },
-    { x: 67, y: 95, size: 50, rotate: 15 },
-    { x: 82, y: 91, size: 64, rotate: -14 },
-    { x: 96, y: 85, size: 54, rotate: 13 },
+    { x: 4, y: 8, size: 82, rotate: -18 }, { x: 13, y: 4, size: 66, rotate: 18 },
+    { x: 25, y: 12, size: 56, rotate: -14 }, { x: 42, y: 8, size: 72, rotate: 15 },
+    { x: 57, y: 5, size: 48, rotate: -10 }, { x: 72, y: 10, size: 58, rotate: 15 },
+    { x: 85, y: 5, size: 80, rotate: 16 }, { x: 96, y: 9, size: 68, rotate: -13 },
+    { x: 3, y: 34, size: 88, rotate: -16 }, { x: 14, y: 28, size: 44, rotate: 18 },
+    { x: 29, y: 19, size: 58, rotate: -12 }, { x: 52, y: 20, size: 42, rotate: 11 },
+    { x: 70, y: 22, size: 50, rotate: -14 }, { x: 87, y: 19, size: 44, rotate: 14 },
+    { x: 98, y: 35, size: 60, rotate: -16 }, { x: 7, y: 64, size: 68, rotate: 14 },
+    { x: 20, y: 57, size: 40, rotate: -16 }, { x: 63, y: 62, size: 66, rotate: 13 },
+    { x: 78, y: 53, size: 42, rotate: -12 }, { x: 92, y: 68, size: 62, rotate: 16 },
+    { x: 4, y: 93, size: 62, rotate: -13 }, { x: 14, y: 87, size: 78, rotate: 17 },
+    { x: 27, y: 94, size: 45, rotate: -12 }, { x: 39, y: 97, size: 54, rotate: 13 },
+    { x: 53, y: 90, size: 72, rotate: -17 }, { x: 67, y: 95, size: 50, rotate: 15 },
+    { x: 82, y: 91, size: 64, rotate: -14 }, { x: 96, y: 85, size: 54, rotate: 13 },
   ];
+
+  const normalize = (value) => String(value || "").toLocaleLowerCase(currentLang).trim();
+  const t = (key) => currentLocale?.ui?.[key] ?? englishLocale?.ui?.[key] ?? key;
+  const categoryLabel = (key) => currentLocale?.categories?.[key] ?? englishLocale?.categories?.[key] ?? key;
+  const platformLabel = (key) => currentLocale?.platforms?.[key] ?? englishLocale?.platforms?.[key] ?? key;
+  const limitationLabel = (key) => currentLocale?.limitations?.[key] ?? englishLocale?.limitations?.[key] ?? key;
+  const noteLabel = (key) => currentLocale?.notes?.[key] ?? englishLocale?.notes?.[key] ?? "";
+  const collator = () => new Intl.Collator(currentLang, { sensitivity: "base", numeric: true });
+
+  function assertRequiredElements() {
+    for (const [name, element] of Object.entries(els)) {
+      if (name === "heroApplause") continue;
+      if (!element) throw new Error(`Missing required DOM element: ${name}`);
+    }
+  }
 
   function seededRange(seed, min, max) {
     const raw = Math.sin(seed * 971.37) * 10000;
@@ -77,34 +77,13 @@
       clap.style.setProperty("--y", item.y);
       clap.style.setProperty("--size", item.size);
       clap.style.setProperty("--rotate", item.rotate);
-      clap.style.setProperty(
-        "--delay",
-        ((index % 7) * 0.46 + seededRange(index + 1, 0.1, 0.75)).toFixed(2),
-      );
-      clap.style.setProperty(
-        "--duration",
-        (reduceMotion ? 0 : seededRange(index + 5, 5.8, 9.2)).toFixed(2),
-      );
-      clap.style.setProperty(
-        "--pulse-duration",
-        (reduceMotion ? 0 : seededRange(index + 11, 2.5, 4.5)).toFixed(2),
-      );
-      clap.style.setProperty(
-        "--dx",
-        seededRange(index + 17, -11, 11).toFixed(2),
-      );
-      clap.style.setProperty(
-        "--dy",
-        seededRange(index + 23, -14, 14).toFixed(2),
-      );
-      clap.style.setProperty(
-        "--turn",
-        seededRange(index + 29, -6, 6).toFixed(2),
-      );
-      clap.style.setProperty(
-        "--opacity",
-        seededRange(index + 31, 0.82, 1).toFixed(2),
-      );
+      clap.style.setProperty("--delay", ((index % 7) * 0.46 + seededRange(index + 1, 0.1, 0.75)).toFixed(2));
+      clap.style.setProperty("--duration", (reduceMotion ? 0 : seededRange(index + 5, 5.8, 9.2)).toFixed(2));
+      clap.style.setProperty("--pulse-duration", (reduceMotion ? 0 : seededRange(index + 11, 2.5, 4.5)).toFixed(2));
+      clap.style.setProperty("--dx", seededRange(index + 17, -11, 11).toFixed(2));
+      clap.style.setProperty("--dy", seededRange(index + 23, -14, 14).toFixed(2));
+      clap.style.setProperty("--turn", seededRange(index + 29, -6, 6).toFixed(2));
+      clap.style.setProperty("--opacity", seededRange(index + 31, 0.82, 1).toFixed(2));
 
       const emoji = document.createElement("span");
       emoji.className = "clap-emoji";
@@ -115,55 +94,28 @@
     els.heroApplause.replaceChildren(...nodes);
   }
 
-  const normalize = (value) =>
-    String(value || "")
-      .toLocaleLowerCase(currentLang)
-      .trim();
-  const t = (key) =>
-    currentLocale?.ui?.[key] ?? englishLocale?.ui?.[key] ?? key;
-  const categoryLabel = (key) =>
-    currentLocale?.categories?.[key] ?? englishLocale?.categories?.[key] ?? key;
-  const platformLabel = (key) =>
-    currentLocale?.platforms?.[key] ?? englishLocale?.platforms?.[key] ?? key;
-  const limitationLabel = (key) =>
-    currentLocale?.limitations?.[key] ??
-    englishLocale?.limitations?.[key] ??
-    key;
-  const noteLabel = (key) =>
-    currentLocale?.notes?.[key] ?? englishLocale?.notes?.[key] ?? "";
-  const collator = () =>
-    new Intl.Collator(currentLang, { sensitivity: "base", numeric: true });
-
   async function loadLocale(code) {
     if (localeCache.has(code)) return localeCache.get(code);
-    const response = await fetch(
-      `locales/${code}.json?v=${encodeURIComponent(BUILD_ID)}`,
-      { cache: "no-store" },
-    );
-    if (!response.ok)
-      throw new Error(`Could not load locale ${code}: HTTP ${response.status}`);
+    const response = await fetch(`locales/${code}.json?v=${encodeURIComponent(BUILD_ID)}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Could not load locale ${code}: HTTP ${response.status}`);
     const locale = await response.json();
     localeCache.set(code, locale);
     return locale;
   }
 
   function setSelectOptions(select, options, selected) {
-    select.replaceChildren(
-      ...options.map(({ value, label }) => {
-        const option = document.createElement("option");
-        option.value = value;
-        option.textContent = label;
-        return option;
-      }),
-    );
-    if ([...select.options].some((option) => option.value === selected))
-      select.value = selected;
+    select.replaceChildren(...options.map(({ value, label }) => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = label;
+      return option;
+    }));
+    select.value = [...select.options].some((option) => option.value === selected) ? selected : "";
   }
 
   function staticTranslations() {
     document.documentElement.lang = currentLocale.meta.code;
     document.documentElement.dir = currentLocale.meta.direction;
-    document.body.dataset.locale = currentLocale.meta.code;
 
     document.querySelectorAll("[data-i18n]").forEach((node) => {
       node.textContent = t(node.dataset.i18n);
@@ -174,45 +126,34 @@
     document.querySelectorAll("[data-i18n-aria-label]").forEach((node) => {
       node.setAttribute("aria-label", t(node.dataset.i18nAriaLabel));
     });
-    document.querySelectorAll("[data-i18n-title]").forEach((node) => {
-      node.setAttribute("title", t(node.dataset.i18nTitle));
-    });
-    document.querySelector('meta[name="description"]').content = t("hero_copy");
-    document.querySelector('meta[property="og:description"]').content =
-      t("hero_copy");
+
+    const translatedTitle = t("site_title");
+    const siteTitle = translatedTitle === "site_title" ? "Kudos to Open Source" : translatedTitle;
+    document.title = siteTitle;
+
+    const description = t("hero_copy");
+    document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+    document.querySelector('meta[property="og:title"]')?.setAttribute("content", siteTitle);
+    document.querySelector('meta[property="og:description"]')?.setAttribute("content", description);
+
     updateThemeLabel();
   }
 
   function populateControls(preserve = {}) {
     const c = collator();
-    setSelectOptions(
-      els.category,
-      [
-        { value: "", label: t("all_categories") },
-        ...categoryKeys
-          .map((key) => ({ value: key, label: categoryLabel(key) }))
-          .sort((a, b) => c.compare(a.label, b.label)),
-      ],
-      preserve.category || "",
-    );
+    setSelectOptions(els.category, [
+      { value: "", label: t("all_categories") },
+      ...categoryKeys.map((key) => ({ value: key, label: categoryLabel(key) })).sort((a, b) => c.compare(a.label, b.label)),
+    ], preserve.category || "");
 
-    setSelectOptions(
-      els.platform,
-      [
-        { value: "", label: t("all_platforms") },
-        ...platformKeys
-          .map((key) => ({ value: key, label: platformLabel(key) }))
-          .sort((a, b) => c.compare(a.label, b.label)),
-      ],
-      preserve.platform || "",
-    );
+    setSelectOptions(els.platform, [
+      { value: "", label: t("all_platforms") },
+      ...platformKeys.map((key) => ({ value: key, label: platformLabel(key) })).sort((a, b) => c.compare(a.label, b.label)),
+    ], preserve.platform || "");
 
     setSelectOptions(
       els.language,
-      localeMetas.map((meta) => ({
-        value: meta.code,
-        label: meta.native_name,
-      })),
+      localeMetas.map((meta) => ({ value: meta.code, label: meta.native_name })),
       currentLang,
     );
   }
@@ -232,10 +173,8 @@
     const project = normalize(record.name);
     const notes = normalize(noteLabel(record.note_key));
     const category = normalize(categoryLabel(record.category));
-    const platforms = normalize(record.platforms.map(platformLabel).join(" "));
-    const limitations = normalize(
-      record.limitations.map(limitationLabel).join(" "),
-    );
+    const platforms = normalize((record.platforms || []).map(platformLabel).join(" "));
+    const limitations = normalize((record.limitations || []).map(limitationLabel).join(" "));
 
     let points = 0;
     if (proprietary === q || project === q) points += 100;
@@ -249,8 +188,7 @@
 
     const tokens = q.split(/\s+/).filter(Boolean);
     const haystack = `${proprietary} ${project} ${category} ${notes} ${platforms} ${limitations}`;
-    if (tokens.length > 1 && tokens.every((token) => haystack.includes(token)))
-      points += 20;
+    if (tokens.length > 1 && tokens.every((token) => haystack.includes(token))) points += 20;
     return points;
   }
 
@@ -273,53 +211,44 @@
     };
   }
 
-  function addTags(container, keys, labeler, className) {
-    keys.forEach((key) => {
-      const tag = document.createElement("span");
-      tag.className = `tag ${className || ""}`.trim();
-      tag.textContent = labeler(key);
-      container.append(tag);
+  function addBadges(container, keys, labeler, extraClass = "") {
+    container.replaceChildren();
+    (keys || []).forEach((key) => {
+      const badge = document.createElement("span");
+      badge.className = `badge rounded-pill border text-body-secondary fw-semibold ${extraClass}`.trim();
+      badge.textContent = labeler(key);
+      container.append(badge);
     });
   }
 
   function renderCard(record) {
-    const card = els.template.content.firstElementChild.cloneNode(true);
-    card.querySelector(".category-pill").textContent = categoryLabel(
-      record.category,
-    );
-    card.querySelector(".mapping-instead").textContent = t("instead_of");
-    card.querySelector(".mapping-try").textContent = t("try");
-    card.querySelector(".proprietary").textContent = record.proprietary;
-    card.querySelector(".arrow").textContent =
-      currentLocale.meta.direction === "rtl" ? "←" : "→";
+    const wrapper = els.template.content.firstElementChild.cloneNode(true);
+    wrapper.querySelector(".category-pill").textContent = categoryLabel(record.category);
+    wrapper.querySelector(".mapping-label").textContent = t("instead_of");
+    wrapper.querySelector(".mapping-try").textContent = t("try");
+    wrapper.querySelector(".proprietary").textContent = record.proprietary;
+    wrapper.querySelector(".mapping-arrow").textContent = currentLocale.meta.direction === "rtl" ? "←" : "→";
 
-    const project = card.querySelector(".project");
+    const project = wrapper.querySelector(".project");
     project.textContent = record.name;
     project.href = record.url;
 
-    card.querySelector(".notes").textContent = noteLabel(record.note_key);
-    card.querySelector(".runs-on-label").textContent = t("runs_on");
-    card.querySelector(".limitations-label").textContent = t("limitations");
-    addTags(
-      card.querySelector(".platforms"),
-      record.platforms,
-      platformLabel,
-      "platform-tag",
-    );
-    addTags(
-      card.querySelector(".limitation-tags"),
-      record.limitations,
-      limitationLabel,
-      "limitation-tag",
-    );
+    wrapper.querySelector(".notes").textContent = noteLabel(record.note_key);
+    wrapper.querySelector(".runs-on-label").textContent = t("runs_on");
+    wrapper.querySelector(".limitations-label").textContent = t("limitations");
 
-    const setup = card.querySelector(".setup-link");
+    addBadges(wrapper.querySelector(".platforms"), record.platforms, platformLabel);
+    addBadges(wrapper.querySelector(".limitation-tags"), record.limitations, limitationLabel);
+
+    const setup = wrapper.querySelector(".setup-link");
     setup.href = record.setup_url;
     setup.textContent = `${t("install_use")} ↗`;
-    const visit = card.querySelector(".visit");
+
+    const visit = wrapper.querySelector(".visit");
     visit.href = record.url;
     visit.textContent = `${t("visit_project")} ↗`;
-    return card;
+
+    return wrapper;
   }
 
   function render() {
@@ -327,25 +256,17 @@
     const query = state.q.trim();
     const c = collator();
 
-    let rows = catalog
+    const rows = catalog
       .map((record) => ({ record, relevance: score(record, query) }))
       .filter(({ record, relevance }) => {
         if (query && relevance === 0) return false;
         if (state.category && record.category !== state.category) return false;
-        if (state.platform && !record.platforms.includes(state.platform))
-          return false;
+        if (state.platform && !(record.platforms || []).includes(state.platform)) return false;
         return true;
-      });
+      })
+      .sort((a, b) => b.relevance - a.relevance || c.compare(a.record.proprietary, b.record.proprietary));
 
-    rows.sort(
-      (a, b) =>
-        b.relevance - a.relevance ||
-        c.compare(a.record.proprietary, b.record.proprietary),
-    );
-
-    els.results.replaceChildren(
-      ...rows.map(({ record }) => renderCard(record)),
-    );
+    els.results.replaceChildren(...rows.map(({ record }) => renderCard(record)));
 
     const filtered = Boolean(query || state.category || state.platform);
     els.clear.hidden = !filtered;
@@ -354,22 +275,22 @@
 
     if (query) {
       els.query.hidden = false;
-      els.query.replaceChildren(
-        document.createTextNode(`${t("showing_matches")} `),
-      );
+      els.query.replaceChildren(document.createTextNode(`${t("showing_matches")} `));
       const strong = document.createElement("strong");
+      strong.className = "text-body";
       strong.textContent = `“${query}”`;
       els.query.append(strong);
     } else {
       els.query.hidden = true;
       els.query.textContent = "";
     }
+
     syncUrl(state);
   }
 
   function scheduleRender() {
-    window.clearTimeout(renderTimer);
-    renderTimer = window.setTimeout(render, 80);
+    clearTimeout(renderTimer);
+    renderTimer = setTimeout(render, 80);
   }
 
   function clearFilters() {
@@ -380,27 +301,29 @@
     els.search.focus();
   }
 
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-bs-theme", theme);
+    localStorage.setItem("kudos-theme", theme);
+    updateThemeLabel();
+  }
+
   function initTheme() {
     const saved = localStorage.getItem("kudos-theme");
     const preferredDark = matchMedia("(prefers-color-scheme: dark)").matches;
-    document.documentElement.dataset.theme =
-      saved || (preferredDark ? "dark" : "light");
+    document.documentElement.setAttribute("data-bs-theme", saved || (preferredDark ? "dark" : "light"));
   }
 
   function updateThemeLabel() {
-    if (!currentLocale) return;
-    const useLight = document.documentElement.dataset.theme === "dark";
-    const label = t(useLight ? "use_light" : "use_dark");
+    if (!els.theme) return;
+    const isDark = document.documentElement.getAttribute("data-bs-theme") === "dark";
+    const label = currentLocale ? t(isDark ? "use_light" : "use_dark") : (isDark ? "Use light theme" : "Use dark theme");
     els.theme.setAttribute("aria-label", label);
     els.theme.setAttribute("title", label);
   }
 
   function toggleTheme() {
-    const next =
-      document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = next;
-    localStorage.setItem("kudos-theme", next);
-    updateThemeLabel();
+    const isDark = document.documentElement.getAttribute("data-bs-theme") === "dark";
+    applyTheme(isDark ? "light" : "dark");
   }
 
   async function changeLanguage(code, preserveState = true) {
@@ -416,34 +339,22 @@
   }
 
   async function init() {
+    assertRequiredElements();
     initTheme();
+
     try {
-      const response = await fetch(
-        `catalog.v2.json?v=${encodeURIComponent(BUILD_ID)}`,
-        { cache: "no-store" },
-      );
+      const response = await fetch(`catalog.v2.json?v=${encodeURIComponent(BUILD_ID)}`, { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const payload = await response.json();
-      if (payload.schema_version !== 2) {
-        throw new Error(
-          `Unsupported catalog schema: ${payload.schema_version ?? "missing"}`,
-        );
-      }
-      if (
-        !Array.isArray(payload.records) ||
-        !Array.isArray(payload.categories) ||
-        !Array.isArray(payload.platforms) ||
-        !Array.isArray(payload.locales)
-      ) {
+
+      if (payload.schema_version !== 2) throw new Error(`Unsupported catalog schema: ${payload.schema_version ?? "missing"}`);
+      if (!Array.isArray(payload.records) || !Array.isArray(payload.categories) || !Array.isArray(payload.platforms) || !Array.isArray(payload.locales)) {
         throw new Error("Catalog payload is malformed");
       }
-      if (
-        payload.records.some(
-          (record) => !record.name || !record.category || !record.url,
-        )
-      ) {
+      if (payload.records.some((record) => !record.name || !record.category || !record.url)) {
         throw new Error("Catalog contains an invalid project record");
       }
+
       catalog = payload.records;
       categoryKeys = payload.categories;
       platformKeys = payload.platforms;
@@ -453,18 +364,15 @@
       const params = new URLSearchParams(location.search);
       const requested = params.get("lang");
       const saved = localStorage.getItem("kudos-language");
-      const browser = navigator.language?.toLowerCase().startsWith("fa")
-        ? "fa"
-        : "en";
+      const browser = navigator.language?.toLowerCase().startsWith("fa") ? "fa" : "en";
       const supported = new Set(localeMetas.map((meta) => meta.code));
-      currentLang =
-        [requested, saved, browser, "en"].find(
-          (code) => code && supported.has(code),
-        ) || "en";
+      currentLang = [requested, saved, browser, "en"].find((code) => code && supported.has(code)) || "en";
       currentLocale = await loadLocale(currentLang);
     } catch (error) {
       console.error("Could not load catalog", error);
       els.empty.hidden = false;
+      els.empty.querySelector("h3").textContent = currentLocale ? t("catalog_unavailable") : "Catalog unavailable";
+      els.empty.querySelector("p").textContent = currentLocale ? t("catalog_unavailable_help") : "Refresh the page or try again later.";
       els.emptyClear.hidden = true;
       return;
     }
@@ -477,37 +385,20 @@
     els.search.value = initial.q;
     render();
 
-    [els.search, els.category, els.platform].forEach((el) => {
-      el.addEventListener(
-        el === els.search ? "input" : "change",
-        scheduleRender,
-      );
-    });
-    els.language.addEventListener("change", () =>
-      changeLanguage(els.language.value),
-    );
+    els.search.addEventListener("input", scheduleRender);
+    els.category.addEventListener("change", render);
+    els.platform.addEventListener("change", render);
+    els.language.addEventListener("change", () => changeLanguage(els.language.value));
     els.clear.addEventListener("click", clearFilters);
     els.emptyClear.addEventListener("click", clearFilters);
     els.theme.addEventListener("click", toggleTheme);
 
     document.addEventListener("keydown", (event) => {
-      if (
-        event.key === "/" &&
-        !event.metaKey &&
-        !event.ctrlKey &&
-        !event.altKey &&
-        !["INPUT", "TEXTAREA", "SELECT"].includes(
-          document.activeElement.tagName,
-        )
-      ) {
+      if (event.key === "/" && !event.metaKey && !event.ctrlKey && !event.altKey && !["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement.tagName)) {
         event.preventDefault();
         els.search.focus();
       }
-      if (
-        event.key === "Escape" &&
-        document.activeElement === els.search &&
-        els.search.value
-      ) {
+      if (event.key === "Escape" && document.activeElement === els.search && els.search.value) {
         els.search.value = "";
         render();
       }

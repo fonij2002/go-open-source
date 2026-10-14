@@ -35,7 +35,7 @@ See [docs/i18n.md](docs/i18n.md). In normal cases you add one locale YML file an
 
 ```bash
 python scripts/validate.py
-python scripts/generate.py
+python scripts/generate_catalog.py
 python scripts/build_site.py
 node --check website/assets/app.js
 ```

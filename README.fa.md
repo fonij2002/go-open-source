@@ -1,4 +1,4 @@
-# Kudos to Open Source 👏
+# Go Open Source 👏
 
 [English](README.md) · [فارسی](README.fa.md)
 

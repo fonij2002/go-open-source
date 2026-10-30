@@ -1,4 +1,4 @@
-# Kudos to Open Source 👏
+# Go Open Source 👏
 
 [English](README.md) · [فارسی](README.fa.md)
 
@@ -22,9 +22,9 @@ The repository includes a dependency-free static website for GitHub Pages with:
 Build it locally:
 
 ```bash
-python scripts/validate.py
-python scripts/build_site.py
-python -m http.server 8000 --directory dist
+python3 scripts/validate.py
+python3 scripts/build_site.py
+python3 -m http.server 8000 --directory dist
 ```
 
 Then open `http://localhost:8000`.

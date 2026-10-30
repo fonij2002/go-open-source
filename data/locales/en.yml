@@ -3,17 +3,18 @@ meta:
   name: English
   native_name: English
   direction: ltr
-  site_title: Kudos to Open Source
+  site_title: Go Open Source
 
 ui:
   skip: Skip to results
-  brand_label: Kudos to Open Source home
+  brand_label: Go Open Source home
   github: GitHub
   theme: Toggle color theme
   language: Language
-  hero_title: Can’t afford it? Run your own.
-  hero_copy: Open-source replacements you can actually install, run, and control.
-  search_placeholder: Search Figma CapCut Photoshop Postman…
+  hero_title_1: Choose tools you control.
+  hero_title_2: Go open source.
+  hero_copy: Compare open-source alternatives and choose the one that fits how you work.
+  search_placeholder: Enter a software name …
   search_label: Search alternatives
   mappings: mappings
   projects: open projects
@@ -36,7 +37,7 @@ ui:
   limitations: Things to know
   install_use: Install / use
   visit_project: Project
-  footer: What do we build for, if not to lessen each other’s hardship?
+  footer: Choose tools you control. Go open source.
   contribute: Contribute
   source: Source
   use_light: Use light theme
@@ -46,6 +47,14 @@ ui:
   notes: Notes
   back_to_catalog: Back to the main catalog
   category_index_title: Categories (In alphabetical order)
+  comparison_title: Open-source alternatives to {product}
+  comparison_intro: Compare the trade-offs before you switch.
+  comparison_count: "{count} alternatives"
+  comparison_summary: "Comparing {count} alternatives to {product}"
+  results_summary: "{count} results"
+  alternative: Alternative
+  best_for: Best for
+  actions: Actions
 
 categories:
   3d-modeling-animation: 3D Modeling & Animation

@@ -3,49 +3,58 @@ meta:
   name: Persian
   native_name: فارسی
   direction: rtl
-  site_title: درود بر متن‌باز
+  site_title: Go Open Source
 
 ui:
   skip: رفتن به نتایج
-  brand_label: صفحه اصلی درود بر متن‌باز
+  brand_label: صفحه اصلی Go Open Source
   github: گیت‌هاب
-  theme: تغییر تم
+  theme: تغییر تم رنگی
   language: زبان
-  hero_title: جایگزین متن‌باز پیدا کنید.
-  hero_copy: برای نرم‌افزارهایی که بابتشان پول می‌دهید، جایگزین متن‌باز پیدا کنید.
-  search_placeholder: جست‌وجو Figma، CapCut، Photoshop، Postman…
+  hero_title_1: کنترل ابزارهاتو دستت بگیر.
+  hero_title_2: نرم‌افزارهای متن‌باز رو امتحان کن.
+  hero_copy: جایگزین‌های متن‌باز رو مقایسه کن و گزینه‌ای رو انتخاب کن که برات مناسب‌تره.
+  search_placeholder: نام یک نرم‌افزار را وارد کن …
   search_label: جست‌وجوی جایگزین‌ها
   mappings: جایگزینی
   projects: پروژه متن‌باز
   categories_count: دسته‌بندی
-  catalog: فهرست ابزارها
-  loading: در حال بارگذاری…
+  catalog: فهرست
+  loading: در حال بارگذاری جایگزین‌ها…
   clear_filters: پاک‌کردن فیلترها
   category: دسته‌بندی
-  all_categories: همه دسته‌ها
+  all_categories: همه دسته‌بندی‌ها
   platform: پلتفرم
   all_platforms: همه پلتفرم‌ها
-  showing_matches: نتایج برای
+  showing_matches: نمایش نتایج برای
   no_matches: نتیجه‌ای پیدا نشد
   no_matches_help: عبارت عمومی‌تری جست‌وجو کنید یا یکی از فیلترها را پاک کنید.
   catalog_unavailable: فهرست در دسترس نیست
-  catalog_unavailable_help: صفحه را دوباره بارگذاری کنید یا بعداً تلاش کنید.
+  catalog_unavailable_help: صفحه را تازه‌سازی کنید یا بعداً دوباره تلاش کنید.
   instead_of: به‌جای
-  try: امتحان کن
+  try: امتحان کنید
   runs_on: قابل اجرا روی
-  limitations: نکات و محدودیت‌ها
-  install_use: نصب / نحوه استفاده
-  visit_project: صفحه پروژه
-  footer: ما برای چه زندگی می‌کنیم اگر از سختی‌های زندگی همدیگر نکاهیم؟
+  limitations: نکاتی که باید بدانید
+  install_use: نصب / استفاده
+  visit_project: پروژه
+  footer: ابزارهایی را انتخاب کنید که کنترلشان دست خودتان است. به متن‌باز بروید.
   contribute: مشارکت
   source: کد منبع
-  use_light: استفاده از پوسته روشن
-  use_dark: استفاده از پوسته تیره
-  proprietary_product: نرم‌افزار تجاری / دارای لایسنس
+  use_light: استفاده از تم روشن
+  use_dark: استفاده از تم تیره
+  proprietary_product: محصول اختصاصی / دارای مجوز
   open_source_alternative: جایگزین متن‌باز
-  notes: توضیح
+  notes: توضیحات
   back_to_catalog: بازگشت به فهرست اصلی
   category_index_title: دسته‌بندی‌ها (به ترتیب حروف الفبا)
+  comparison_title: جایگزین‌های متن‌باز برای {product}
+  comparison_intro: قبل از جابه‌جایی، تفاوت‌ها و محدودیت‌ها را مقایسه کنید.
+  comparison_count: "{count} جایگزین"
+  comparison_summary: "مقایسه {count} جایگزین برای {product}"
+  results_summary: "{count} نتیجه"
+  alternative: جایگزین
+  best_for: مناسب برای
+  actions: اقدامات
 
 categories:
   3d-modeling-animation: مدل‌سازی و انیمیشن سه‌بعدی
@@ -54,72 +63,72 @@ categories:
   api-clients: کلاینت‌های API
   audio-editing-recording: ویرایش و ضبط صدا
   business-intelligence: هوش تجاری
-  cad: طراحی مهندسی (CAD)
+  cad: CAD
   cms: سیستم مدیریت محتوا (CMS)
-  community-forums: انجمن و کامیونیتی
+  community-forums: انجمن‌ها و کامیونیتی‌ها
   computer-algebra: جبر رایانه‌ای
   containers: کانتینرها
   crm-erp: CRM و ERP
   customer-support: پشتیبانی مشتری
-  databases-analytical: پایگاه‌داده تحلیلی
-  databases-relational: پایگاه‌داده رابطه‌ای
-  desktop-publishing: صفحه‌آرایی و نشر رومیزی
+  databases-analytical: پایگاه‌داده‌های تحلیلی
+  databases-relational: پایگاه‌داده‌های رابطه‌ای
+  desktop-publishing: نشر رومیزی
   diagramming: رسم نمودار و دیاگرام
   digital-painting: نقاشی دیجیتال
   distributed-query-engines: موتورهای کوئری توزیع‌شده
   dj: نرم‌افزار DJ
   document-collaboration: همکاری روی اسناد
   e-signature: امضای الکترونیکی
-  ecommerce: فروشگاه اینترنتی
-  email-marketing: ایمیل مارکتینگ
+  ecommerce: تجارت الکترونیک
+  email-marketing: بازاریابی ایمیلی
   error-monitoring: مانیتورینگ خطا
   file-sync-cloud: همگام‌سازی فایل و کلاد خصوصی
-  forms-surveys: فرم و نظرسنجی
-  gis: سامانه اطلاعات جغرافیایی (GIS)
-  git-forges: میزبانی و مدیریت Git
+  forms-surveys: فرم‌ها و نظرسنجی‌ها
+  gis: GIS
+  git-forges: پلتفرم‌های میزبانی Git
   headless-cms: Headless CMS
-  iam-sso: هویت، IAM و SSO
-  ide-code-editors: IDE و ویرایشگر کد
+  iam-sso: مدیریت هویت، IAM و SSO
+  ide-code-editors: IDE و ویرایشگرهای کد
   image-editing: ویرایش تصویر
   infrastructure-as-code: زیرساخت به‌صورت کد
-  issue-project-management: مدیریت پروژه و Issue
+  issue-project-management: مدیریت Issue و پروژه
   kanban: کانبان
-  key-value-databases: پایگاه‌داده Key-Value
+  key-value-databases: پایگاه‌داده‌های Key-Value
   knowledge-base-wiki: پایگاه دانش و ویکی
   llm-runtimes: اجرای مدل‌های زبانی (LLM)
-  low-code-internal-tools: ابزار داخلی Low-code
-  media-servers: مدیا سرور
-  motion-graphics-vfx: موشن گرافیک و جلوه‌های ویژه
-  music-production-daw: ساخت موسیقی و DAW
+  low-code-internal-tools: ابزارهای داخلی Low-code
+  media-servers: مدیا سرورها
+  motion-graphics-vfx: موشن گرافیک و VFX
+  music-production-daw: تولید موسیقی و DAW
   music-streaming: استریم موسیقی
   note-taking: یادداشت‌برداری
   numerical-computing: محاسبات عددی
   observability-metrics: Observability و متریک‌ها
-  office-suites: مجموعه نرم‌افزارهای اداری
-  paas-deployment: استقرار اپ و PaaS
+  office-suites: مجموعه‌های اداری
+  paas-deployment: PaaS و استقرار اپلیکیشن
   password-managers: مدیریت رمز عبور
   pdf-tools: ابزارهای PDF
   photo-library: کتابخانه عکس
   photo-management-raw: مدیریت عکس و RAW
   publishing-newsletters: انتشار محتوا و خبرنامه
   remote-desktop: دسترسی از راه دور
-  scheduling: زمان‌بندی و رزرو
+  scheduling: زمان‌بندی
   screen-recording-streaming: ضبط صفحه و استریم
-  search-engines: موتور جست‌وجو
+  search-engines: موتورهای جست‌وجو
   smart-home: خانه هوشمند
   statistics: آمار
   team-chat: چت تیمی
   ui-ux-design: طراحی UI/UX
   vector-graphics: گرافیک برداری
-  video-conferencing: جلسه ویدیویی
+  video-conferencing: ویدئوکنفرانس
   video-editing: ویرایش ویدئو
   video-hosting: میزبانی ویدئو
-  video-players: پخش‌کننده ویدئو
+  video-players: پخش‌کننده‌های ویدئو
   virtualization: مجازی‌سازی
   web-analytics: آنالیتیکس وب
-  web-builders: صفحه‌ساز وب
+  web-builders: صفحه‌سازهای بصری وب
   web-mapping: نقشه تحت وب
-  whiteboards: وایت‌بورد
+  whiteboards: وایت‌بوردها
   workflow-automation: اتوماسیون گردش‌کار
 
 platforms:
@@ -131,243 +140,243 @@ platforms:
   web: وب
   docker: Docker
   linux-server: سرور لینوکس
-  cli: خط فرمان
+  cli: CLI
   vscode: VS Code
   jetbrains: IDEهای JetBrains
   wordpress: WordPress
   javascript: JavaScript / مرورگر
 
 limitations:
-  advanced-features-limited: امکانات پیشرفته محدودتر است
-  advanced-setup: راه‌اندازی پیشرفته
-  advanced-workflow: یادگیری دشوارتر
-  bare-metal: معمولاً به سیستم/سرور اختصاصی نیاز دارد
-  browser-first: تجربه اصلی تحت وب است
-  cluster-oriented: بیشتر مناسب کلاستر
+  advanced-features-limited: امکانات پیشرفته محدودند
+  advanced-setup: راه‌اندازی پیچیده‌تر
+  advanced-workflow: شیب یادگیری بیشتر
+  bare-metal: معمولاً به یک میزبان اختصاصی نیاز دارد
+  browser-first: وب‌محور است
+  cluster-oriented: کلاستر-محور است
   code-driven: گردش‌کار مبتنی بر کد
-  collaboration-limited: همکاری داخلی محدودتر است
+  collaboration-limited: امکانات همکاری داخلی محدودند
   community-compatible-server: سرور سازگارِ کامیونیتی است، نه سرور رسمی Bitwarden
   desktop-focused: متمرکز بر دسکتاپ
-  developer-oriented: مناسب کاربران فنی و توسعه‌دهندگان
-  docker-recommended: Docker پیشنهاد می‌شود
-  embedded-local-first: Embedded و محلی؛ جایگزین انبارداده میزبانی‌شده نیست
-  enterprise-paid: بعضی امکانات سازمانی پولی است
-  extension-marketplace-differs: Marketplace افزونه/پیش‌فرض‌های telemetry با VS Code فرق دارد
-  external-backend: به backend متریک/لاگ/داده نیاز دارد
-  file-compatibility: سازگاری فایل‌های اختصاصی ممکن است کامل نباشد
-  flow-programming: مدل برنامه‌نویسی Flow-based
-  format-support: پشتیبانی codec/فرمت بسته به پلتفرم و build فرق می‌کند
-  gpu-recommended: برای کار سنگین GPU پیشنهاد می‌شود
-  hardware-integration-varies: سازگاری سخت‌افزار/کنترلر متفاوت است
-  ide-extension: به IDE پشتیبانی‌شده نیاز دارد
+  developer-oriented: مناسب توسعه‌دهندگان و کاربران فنی
+  docker-recommended: استفاده از Docker پیشنهاد می‌شود
+  embedded-local-first: تعبیه‌شده و محلی است؛ انبارداده میزبانی‌شده نیست
+  enterprise-paid: بعضی امکانات سازمانی پولی هستند
+  extension-marketplace-differs: Marketplace افزونه‌ها و پیش‌فرض‌های telemetry با VS Code متفاوت است
+  external-backend: به backend جداگانه برای متریک، لاگ یا داده نیاز دارد
+  file-compatibility: سازگاری با فرمت‌های اختصاصی ممکن است متفاوت باشد
+  flow-programming: از مدل برنامه‌نویسی Flow-based استفاده می‌کند
+  format-support: پشتیبانی از codec و فرمت بسته به پلتفرم یا build متفاوت است
+  gpu-recommended: برای بارهای کاری سنگین GPU پیشنهاد می‌شود
+  hardware-integration-varies: پشتیبانی از سخت‌افزار و کنترلر متفاوت است
+  ide-extension: به یک IDE پشتیبانی‌شده نیاز دارد
   linux-only: فقط لینوکس
-  linux-server: استقرار روی سرور لینوکس
-  local-first-sync: Sync/همکاری نیاز به تنظیم یا سرویس جداگانه دارد
-  local-library-only: فقط آرشیو خودتان؛ کاتالوگ تجاری ندارد
-  mac-linux-only: نسخه native ویندوز ندارد
-  matrix-account-or-server: به اکانت یا سرور Matrix نیاز دارد
-  metrics-focused: تمرکز روی متریک؛ برای لاگ/trace ابزار دیگری لازم است
-  model-download: مدل‌ها جداگانه دانلود می‌شوند
-  narrow-scope: دامنه قابلیت‌ها از یک suite کامل محدودتر است
-  newsletter-focused: بیشتر برای خبرنامه است تا اتوماسیون بازاریابی کامل
+  linux-server: نیازمند استقرار روی سرور لینوکس
+  local-first-sync: همگام‌سازی و همکاری به تنظیمات یا سرویس جداگانه نیاز دارد
+  local-library-only: فقط کتابخانه شخصی شما را استریم می‌کند؛ کاتالوگ تجاری ندارد
+  mac-linux-only: نسخه native برای ویندوز ندارد
+  matrix-account-or-server: به حساب یا سرور Matrix نیاز دارد
+  metrics-focused: متمرکز بر متریک است؛ برای لاگ و trace به ابزارهای دیگری نیاز دارد
+  model-download: مدل‌ها باید جداگانه دانلود شوند
+  narrow-scope: دامنه قابلیت‌ها از یک مجموعه کامل محدودتر است
+  newsletter-focused: بیشتر روی خبرنامه تمرکز دارد تا اتوماسیون بازاریابی کامل
   no-cloud-catalog: کاتالوگ تجاری مدل همراه ندارد
-  no-native-windows: سرور native ویندوز ندارد
-  open-core: Open-core؛ بخشی از قابلیت‌ها/کد اختصاصی است
-  paid-official-builds: بیلد رسمی ممکن است نیاز به پرداخت/حمایت مالی داشته باشد
-  partial-editor: برای ادیت ساده/بدون افت عالی است، اما NLE کامل نیست
-  peer-to-peer-not-cloud: Sync همتابه‌همتا؛ فضای ابری میزبانی‌شده ندارد
-  platform-feature-gaps: بعضی امکانات بین سیستم‌عامل‌ها متفاوت است
-  plugin-ecosystem: اکوسیستم افزونه با ابزار تجاری متفاوت است
-  plugin-security: افزونه و قالب نیاز به نگهداری امنیتی دارد
+  no-native-windows: build بومی سرور برای ویندوز ندارد
+  open-core: Open-core است؛ بخشی از کد یا قابلیت‌ها اختصاصی هستند
+  paid-official-builds: باینری‌های رسمی ممکن است نیازمند پرداخت یا کمک مالی باشند
+  partial-editor: برای ویرایش‌های ساده و بدون افت عالی است، اما NLE کامل نیست
+  peer-to-peer-not-cloud: همگام‌سازی P2P است؛ فضای ابری میزبانی‌شده ندارد
+  platform-feature-gaps: بعضی قابلیت‌ها بین سیستم‌عامل‌ها متفاوت‌اند
+  plugin-ecosystem: اکوسیستم افزونه‌ها با محصول اختصاصی متفاوت است
+  plugin-security: افزونه‌ها و قالب‌ها نیازمند نگهداری امنیتی هستند
   provider-required: مدل یا provider هوش مصنوعی باید جداگانه تنظیم شود
-  publishing-focused: تمرکز روی انتشار است، نه یک CMS عمومی کامل
-  recording-not-editor: اولویت با ضبط/استریم است؛ ادیتور کامل ویدئو نیست
+  publishing-focused: متمرکز بر انتشار است، نه یک CMS عمومی و کامل
+  recording-not-editor: اول برای ضبط و استریم طراحی شده؛ ویرایشگر کامل ویدئو نیست
   requires-wordpress: به WordPress نیاز دارد
   resource-heavy: ممکن است منابع زیادی مصرف کند
-  security-hardening: برای دسترسی اینترنتی نیاز به سخت‌گیری امنیتی دارد
-  self-hosting-optional: Self-host اختیاری است
-  self-hosting-required: نیاز به self-host / سرور دارد
-  server-admin: به دانش مدیریت سرور نیاز دارد
-  third-party-windows-builds: بیشتر بیلدهای ویندوز third-party هستند
-  web-library: کتابخانه/فریم‌ورک توسعه‌دهنده است، نه اپ مستقل
-  cli-first: گردش‌کار بیشتر مبتنی بر خط فرمان
-  upstream-read-only: مخزن upstream فقط‌خواندنی است و دیگر فعالانه نگهداری نمی‌شود
+  security-hardening: استقرارهای در دسترس اینترنت به سخت‌سازی امنیتی نیاز دارند
+  self-hosting-optional: Self-hosting اختیاری است
+  self-hosting-required: به Self-hosting یا سرور نیاز دارد
+  server-admin: به مدیریت سرور نیاز دارد
+  third-party-windows-builds: بیشتر buildهای ویندوز توسط third-party ارائه می‌شوند
+  web-library: کتابخانه یا فریم‌ورک توسعه است، نه یک اپلیکیشن مستقل
+  cli-first: گردش‌کار عمدتاً مبتنی بر CLI است
+  upstream-read-only: مخزن upstream فقط‌خواندنی است و دیگر به‌طور فعال نگهداری نمی‌شود
 
 notes:
-  figma-penpot: طراحی UI/UX، پروتوتایپ، سیستم طراحی و همکاری تیمی.
-  adobe-photoshop-gimp: ویرایش تصاویر رستری و دست‌کاری عکس.
-  adobe-photoshop-krita: نقاشی دیجیتال، تصویرسازی و ویرایش رستری.
-  adobe-illustrator-inkscape: طراحی برداری و ساخت SVG.
-  adobe-indesign-scribus: صفحه‌آرایی و نشر رومیزی.
-  adobe-lightroom-darktable: مدیریت عکس و پردازش فایل‌های RAW.
-  adobe-lightroom-rawtherapee: مدیریت عکس و پردازش فایل‌های RAW.
-  adobe-lightroom-digikam: مدیریت عکس و پردازش فایل‌های RAW.
-  canva-inkscape: برای طراحی برداری بسیار مناسب است، اما تجربه‌ی template محور Canva را کامل جایگزین نمی‌کند.
-  canva-krita: برای طراحی رستری و گرافیک شبکه‌های اجتماعی مناسب است، اما ابزار template محور نیست.
-  coreldraw-inkscape: طراحی برداری و ساخت SVG.
-  capcut-kdenlive: ویرایش ویدئو با تایم‌لاین و ابزارهای تدوین.
-  capcut-shotcut: ویرایش ویدئو با تایم‌لاین و ابزارهای تدوین.
-  capcut-openshot: ویرایش ویدئو با تایم‌لاین و ابزارهای تدوین.
-  capcut-losslesscut: ویرایش ویدئو با تایم‌لاین و ابزارهای تدوین.
-  adobe-premiere-pro-kdenlive: ویرایش ویدئو با تایم‌لاین و ابزارهای تدوین.
-  adobe-premiere-pro-shotcut: ویرایش ویدئو با تایم‌لاین و ابزارهای تدوین.
-  final-cut-pro-kdenlive: ویرایش ویدئو با تایم‌لاین و ابزارهای تدوین.
-  adobe-after-effects-blender: کامپوزیت، موشن گرافیک و جلوه‌های ویژه.
-  adobe-after-effects-natron: کامپوزیت، موشن گرافیک و جلوه‌های ویژه.
-  adobe-after-effects-glaxnimate: کامپوزیت، موشن گرافیک و جلوه‌های ویژه.
-  davinci-resolve-kdenlive: تدوین قدرتمندی دارد، اما Resolve در رنگ، صدا و VFX یکپارچه گسترده‌تر است.
-  davinci-resolve-blender: کامپوزیت، موشن گرافیک و جلوه‌های ویژه.
-  screenflow-obs-studio: ضبط صفحه و استریم؛ برای تدوین کامل به ابزار جداگانه نیاز دارید.
-  adobe-audition-audacity: ضبط، ویرایش و پاک‌سازی صدا.
-  adobe-audition-ardour: ضبط، میکس، MIDI و تولید موسیقی در محیط DAW.
-  ableton-live-ardour: ضبط، میکس، MIDI و تولید موسیقی در محیط DAW.
-  ableton-live-lmms: ضبط، میکس، MIDI و تولید موسیقی در محیط DAW.
-  fl-studio-lmms: ضبط، میکس، MIDI و تولید موسیقی در محیط DAW.
-  logic-pro-ardour: ضبط، میکس، MIDI و تولید موسیقی در محیط DAW.
-  logic-pro-qtractor: ضبط، میکس، MIDI و تولید موسیقی در محیط DAW.
-  serato-dj-mixxx: میکس DJ، مدیریت آرشیو و پشتیبانی از کنترلر.
-  traktor-pro-mixxx: میکس DJ، مدیریت آرشیو و پشتیبانی از کنترلر.
-  autodesk-maya-blender: مدل‌سازی، انیمیشن، رندر و گردش‌کار سه‌بعدی.
-  autodesk-3ds-max-blender: مدل‌سازی، انیمیشن، رندر و گردش‌کار سه‌بعدی.
-  autocad-freecad: طراحی CAD پارامتریک یا نقشه‌کشی فنی.
-  autocad-librecad: طراحی CAD پارامتریک یا نقشه‌کشی فنی.
-  solidworks-freecad: طراحی CAD پارامتریک یا نقشه‌کشی فنی.
-  solidworks-solvespace: طراحی CAD پارامتریک یا نقشه‌کشی فنی.
-  fusion-360-freecad: طراحی CAD پارامتریک یا نقشه‌کشی فنی.
-  fusion-360-openscad: طراحی CAD پارامتریک یا نقشه‌کشی فنی.
-  sketchup-blender: مدل‌سازی، انیمیشن، رندر و گردش‌کار سه‌بعدی.
-  sketchup-freecad: طراحی CAD پارامتریک یا نقشه‌کشی فنی.
-  microsoft-office-libreoffice: مجموعه ابزارهای اداری برای متن، صفحه‌گسترده و ارائه.
-  microsoft-365-onlyoffice: مجموعه ابزارهای اداری برای متن، صفحه‌گسترده و ارائه.
-  google-docs-sheets-slides-onlyoffice: مجموعه ابزارهای اداری برای متن، صفحه‌گسترده و ارائه.
-  google-docs-sheets-slides-collabora-online: ویرایش و همکاری تحت وب روی اسناد.
-  adobe-acrobat-stirling-pdf: ابزارهای کار با PDF مانند ادغام، تفکیک و تبدیل.
-  adobe-acrobat-pdf-arranger: ابزارهای کار با PDF مانند ادغام، تفکیک و تبدیل.
-  docusign-docuseal: امضای الکترونیکی و گردش‌کار اسناد.
-  docusign-opensign: امضای الکترونیکی و گردش‌کار اسناد.
-  notion-appflowy: یادداشت‌برداری و مدیریت دانش شخصی.
-  notion-logseq: یادداشت‌برداری و مدیریت دانش شخصی.
-  evernote-joplin: یادداشت‌برداری و مدیریت دانش شخصی.
-  microsoft-onenote-joplin: یادداشت‌برداری و مدیریت دانش شخصی.
-  microsoft-onenote-xournalpp: یادداشت‌برداری و مدیریت دانش شخصی.
-  confluence-bookstack: مستندسازی تیمی، ویکی و پایگاه دانش.
-  confluence-wiki-js: مستندسازی تیمی، ویکی و پایگاه دانش.
-  confluence-xwiki: مستندسازی تیمی، ویکی و پایگاه دانش.
-  slack-mattermost: پیام‌رسانی و همکاری تیمی.
-  slack-zulip: پیام‌رسانی و همکاری تیمی.
-  slack-rocket-chat: پیام‌رسانی و همکاری تیمی.
-  discord-element: پیام‌رسانی و همکاری تیمی.
-  microsoft-teams-mattermost: پیام‌رسانی و همکاری تیمی.
-  zoom-jitsi-meet: جلسات ویدیویی تحت وب و امکان میزبانی شخصی.
-  google-meet-jitsi-meet: جلسات ویدیویی تحت وب و امکان میزبانی شخصی.
-  zoom-bigbluebutton: جلسات ویدیویی تحت وب و امکان میزبانی شخصی.
-  calendly-cal-com: زمان‌بندی جلسه و صفحه رزرو.
-  loom-obs-studio: برای ضبط عالی است؛ اشتراک‌گذاری async به سرویس یا میزبانی جداگانه نیاز دارد.
-  jira-openproject: مدیریت پروژه، وظایف، roadmap و issueها.
-  jira-taiga: مدیریت پروژه، وظایف، roadmap و issueها.
-  asana-openproject: مدیریت پروژه، وظایف، roadmap و issueها.
-  asana-leantime: مدیریت پروژه، وظایف، roadmap و issueها.
-  trello-wekan: مدیریت کارها با بورد کانبان.
-  trello-kanboard: مدیریت کارها با بورد کانبان.
-  miro-excalidraw: وایت‌بورد مشارکتی برای ایده‌پردازی و طراحی سریع.
-  lucidchart-diagrams-net: رسم فلوچارت، دیاگرام و معماری سیستم.
-  microsoft-visio-diagrams-net: رسم فلوچارت، دیاگرام و معماری سیستم.
-  dropbox-nextcloud: همگام‌سازی، اشتراک فایل و کلاد خصوصی.
-  google-drive-nextcloud: همگام‌سازی، اشتراک فایل و کلاد خصوصی.
-  onedrive-nextcloud: همگام‌سازی، اشتراک فایل و کلاد خصوصی.
-  dropbox-syncthing: همگام‌سازی مستقیم دستگاه‌به‌دستگاه است و فضای ابری میزبانی‌شده ارائه نمی‌کند.
-  google-photos-immich: بکاپ و مرور کتابخانه عکس و ویدئو به‌صورت self-hosted.
-  icloud-photos-immich: بکاپ و مرور کتابخانه عکس و ویدئو به‌صورت self-hosted.
-  plex-jellyfin: مدیا سرور شخصی برای استریم محتوای خودتان.
-  youtube-peertube: میزبانی و انتشار ویدئو به‌صورت مستقل یا فدریت‌شده.
-  spotify-self-hosted-library-use-case-navidrome: آرشیو موسیقی شخصی شما را استریم می‌کند و کاتالوگ تجاری موسیقی ندارد.
-  1password-keepassxc: مدیریت امن رمزها و اطلاعات ورود.
-  1password-bitwarden: مدیریت امن رمزها و اطلاعات ورود.
-  lastpass-vaultwarden: مدیریت امن رمزها و اطلاعات ورود.
-  lastpass-keepassxc: مدیریت امن رمزها و اطلاعات ورود.
-  auth0-keycloak: مدیریت هویت، SSO و پروتکل‌های OIDC/SAML.
-  okta-keycloak: مدیریت هویت، SSO و پروتکل‌های OIDC/SAML.
-  teamviewer-rustdesk: دسترسی و مدیریت سیستم‌ها از راه دور.
-  anydesk-rustdesk: دسترسی و مدیریت سیستم‌ها از راه دور.
-  teamviewer-meshcentral: دسترسی و مدیریت سیستم‌ها از راه دور.
-  microsoft-remote-desktop-manager-remmina: دسترسی و مدیریت سیستم‌ها از راه دور.
-  sublime-text-kate: ویرایشگر کد/IDE برای توسعه نرم‌افزار.
-  sublime-text-geany: ویرایشگر کد/IDE برای توسعه نرم‌افزار.
-  visual-studio-code-microsoft-distribution-vscodium: بیلدهای جامعه از کد متن‌باز VS Code با برندینگ و پیش‌فرض‌های telemetry متفاوت.
-  postman-bruno: تست و توسعه API و نگهداری collectionها.
-  postman-hoppscotch: تست و توسعه API و نگهداری collectionها.
-  insomnia-bruno: تست و توسعه API و نگهداری collectionها.
-  github-forgejo: میزبانی Git همراه با issue، pull request و امکانات DevOps.
-  github-gitea: میزبانی Git همراه با issue، pull request و امکانات DevOps.
-  github-gitlab-community-edition: میزبانی Git همراه با issue، pull request و امکانات DevOps.
-  docker-desktop-podman: اجرای کانتینر و گردش‌کارهای سازگار با Docker.
-  docker-desktop-rancher-desktop: اجرای کانتینر و گردش‌کارهای سازگار با Docker.
-  docker-desktop-colima: اجرای کانتینر و گردش‌کارهای سازگار با Docker.
-  terraform-enterprise-terraform-cli-post-bsl-opentofu: مدیریت زیرساخت به‌صورت کد با گردش‌کار سازگار با Terraform.
-  oracle-database-postgresql: پایگاه‌داده رابطه‌ای عمومی و قابل توسعه.
-  microsoft-sql-server-postgresql: پایگاه‌داده رابطه‌ای عمومی و قابل توسعه.
-  oracle-database-mariadb: پایگاه‌داده رابطه‌ای عمومی و قابل توسعه.
-  snowflake-clickhouse: پایگاه‌داده/موتور تحلیلی برای OLAP و تحلیل داده.
-  bigquery-clickhouse: پایگاه‌داده/موتور تحلیلی برای OLAP و تحلیل داده.
-  bigquery-duckdb: موتور SQL تحلیلی embedded است و برای تحلیل محلی بسیار مناسب است.
-  trino-starburst-enterprise-trino: اجرای کوئری SQL توزیع‌شده روی منابع داده مختلف.
-  redis-enterprise-features-valkey: ذخیره‌ساز سریع in-memory و Key-Value.
-  elasticsearch-opensearch: جست‌وجوی متن و ایندکس‌گذاری برای اپلیکیشن‌ها.
-  algolia-meilisearch: جست‌وجوی متن و ایندکس‌گذاری برای اپلیکیشن‌ها.
-  tableau-apache-superset: داشبورد، BI، کوئری SQL و مصورسازی داده.
-  power-bi-metabase: داشبورد، BI، کوئری SQL و مصورسازی داده.
-  tableau-redash: داشبورد، BI، کوئری SQL و مصورسازی داده.
-  google-analytics-matomo: آنالیتیکس وب با امکان میزبانی شخصی و تمرکز بیشتر بر حریم خصوصی.
-  google-analytics-plausible-analytics: آنالیتیکس وب با امکان میزبانی شخصی و تمرکز بیشتر بر حریم خصوصی.
-  google-analytics-umami: آنالیتیکس وب با امکان میزبانی شخصی و تمرکز بیشتر بر حریم خصوصی.
-  datadog-grafana: برای داشبورد و observability عالی است، اما معمولاً به backend متریک/لاگ/trace نیاز دارد.
-  datadog-prometheus: مانیتورینگ، متریک، داشبورد و alerting.
+  figma-penpot: طراحی UI/UX، پروتوتایپ، سیستم‌های طراحی و همکاری بلادرنگ.
+  adobe-photoshop-gimp: ویرایش عمومی تصاویر رستری و دست‌کاری عکس.
+  adobe-photoshop-krita: نقاشی دیجیتال، تصویرسازی و ویرایش تصاویر رستری.
+  adobe-illustrator-inkscape: تصویرسازی برداری و ساخت SVG.
+  adobe-indesign-scribus: نشر رومیزی و صفحه‌آرایی.
+  adobe-lightroom-darktable: گردش‌کار غیرمخرب RAW و مدیریت عکس.
+  adobe-lightroom-rawtherapee: پردازش RAW با کنترل دقیق.
+  adobe-lightroom-digikam: مدیریت، برچسب‌گذاری و ویرایش عکس.
+  canva-inkscape: برای طراحی برداری بسیار مناسب است؛ اما نسبت به Canva کمتر template محور است.
+  canva-krita: برای آثار رستری و گرافیک شبکه‌های اجتماعی مناسب است.
+  coreldraw-inkscape: گرافیک برداری و تصویرسازی.
+  capcut-kdenlive: ویرایشگر غیرخطی کامل با افکت، عنوان، زیرنویس و تدوین چندترکه.
+  capcut-shotcut: ویرایشگر تایم‌لاین چندسکویی با پشتیبانی گسترده از فرمت‌ها.
+  capcut-openshot: ویرایشگر ویدئوی چندسکویی و مناسب تازه‌کارها.
+  capcut-losslesscut: برای برش سریع و بدون افت و ویرایش‌های ساده عالی است.
+  adobe-premiere-pro-kdenlive: گردش‌کار NLE چندترکه در سطح حرفه‌ای.
+  adobe-premiere-pro-shotcut: NLE عمومی با فیلترها، scopeها و کنترل‌های خروجی.
+  final-cut-pro-kdenlive: ویرایش حرفه‌ای چندسکویی.
+  adobe-after-effects-blender: کامپوزیت، موشن گرافیک، tracking و سه‌بعدی.
+  adobe-after-effects-natron: کامپوزیت node-based و VFX.
+  adobe-after-effects-glaxnimate: انیمیشن برداری دوبعدی و موشن گرافیک.
+  davinci-resolve-kdenlive: تدوین قدرتمندی دارد؛ Resolve همچنان در یکپارچگی رنگ، صدا و VFX گسترده‌تر است.
+  davinci-resolve-blender: کامپوزیت، tracking و تدوین با Video Sequence Editor.
+  screenflow-obs-studio: اولویت با ضبط و استریم است؛ برای تدوین می‌توانید آن را با Kdenlive ترکیب کنید.
+  adobe-audition-audacity: ضبط و ویرایش waveform، پاک‌سازی صدا و پشتیبانی از pluginها.
+  adobe-audition-ardour: DAW کامل برای ضبط، میکس و mastering.
+  ableton-live-ardour: گردش‌کار حرفه‌ای DAW؛ تمرکز آن با clip launcher در Live متفاوت است.
+  ableton-live-lmms: تولید موسیقی الکترونیک و sequencing.
+  fl-studio-lmms: تولید موسیقی مبتنی بر pattern و MIDI sequencing.
+  logic-pro-ardour: ضبط، ویرایش، میکس و pluginها.
+  logic-pro-qtractor: sequencer چندترکه صوتی/MIDI با تمرکز بر لینوکس.
+  serato-dj-mixxx: میکس DJ، مدیریت کتابخانه و پشتیبانی از controllerها.
+  traktor-pro-mixxx: اجرای DJ و گردش‌کار با controllerها.
+  autodesk-maya-blender: مدل‌سازی، انیمیشن، rigging، رندر و VFX.
+  autodesk-3ds-max-blender: مجموعه عمومی ساخت محتوای سه‌بعدی.
+  autocad-freecad: CAD سه‌بعدی پارامتریک و گردش‌کارهای فنی.
+  autocad-librecad: نقشه‌کشی CAD دوبعدی.
+  solidworks-freecad: CAD مکانیکی پارامتریک.
+  solidworks-solvespace: CAD پارامتریک دوبعدی/سه‌بعدی مبتنی بر constraint.
+  fusion-360-freecad: CAD پارامتریک؛ اکوسیستم و گردش‌کار آن با Fusion متفاوت است.
+  fusion-360-openscad: مدل‌سازی solid مبتنی بر کد.
+  sketchup-blender: مدل‌سازی انعطاف‌پذیر با شیب یادگیری بیشتر.
+  sketchup-freecad: برای مهندسی مناسب‌تر است تا sketch سریع معماری.
+  microsoft-office-libreoffice: شامل Writer، Calc، Impress، Draw، Base و Math.
+  microsoft-365-onlyoffice: ویرایشگرهای اداری وب و دسکتاپ با سازگاری خوب با OOXML.
+  google-docs-sheets-slides-onlyoffice: ویرایش مشارکتی اسناد در مرورگر.
+  google-docs-sheets-slides-collabora-online: همکاری مرورگری بر پایه فناوری LibreOffice.
+  adobe-acrobat-stirling-pdf: پلتفرم Open-core برای PDF؛ برای قابلیت‌های مورد استفاده، مرزهای مجوز upstream را بررسی کنید.
+  adobe-acrobat-pdf-arranger: ادغام، تفکیک، چرخش، برش و مرتب‌سازی صفحات PDF.
+  docusign-docuseal: امضای الکترونیکی self-hostable و گردش‌کار اسناد.
+  docusign-opensign: گردش‌کار امضای الکترونیکی متن‌باز.
+  notion-appflowy: پروژه‌ها، اسناد، دیتابیس‌ها و workspace مشارکتی.
+  notion-logseq: مدیریت دانش Local-first و یادداشت‌های graph-based.
+  evernote-joplin: یادداشت‌های Offline-first، notebookها، sync و web clipper.
+  microsoft-onenote-joplin: یادداشت‌برداری چندسکویی با قابلیت sync.
+  microsoft-onenote-xournalpp: یادداشت دست‌نویس، حاشیه‌نویسی PDF و گردش‌کار stylus.
+  confluence-bookstack: مستندسازی ساختاریافته تیم و ویکی.
+  confluence-wiki-js: ویکی مدرن و self-hosted.
+  confluence-xwiki: پلتفرم توسعه‌پذیر ویکی و مدیریت دانش برای سازمان‌ها.
+  slack-mattermost: پیام‌رسانی و همکاری تیمی self-hosted.
+  slack-zulip: چت تیمی مبتنی بر topic.
+  slack-rocket-chat: پیام‌رسانی self-hosted و ارتباطات omnichannel.
+  discord-element: پیام‌رسانی غیرمتمرکز مبتنی بر Matrix.
+  microsoft-teams-mattermost: چت و همکاری تیمی؛ اکوسیستم جلسات متفاوت است.
+  zoom-jitsi-meet: ویدئوکنفرانس در مرورگر با امکان self-hosting.
+  google-meet-jitsi-meet: جلسات ویدئویی تحت وب.
+  zoom-bigbluebutton: کلاس آنلاین، وبینار و ابزارهای همکاری.
+  calendly-cal-com: زیرساخت زمان‌بندی و صفحات رزرو.
+  loom-obs-studio: برای capture و recording عالی است؛ اشتراک‌گذاری async به میزبانی جداگانه نیاز دارد.
+  jira-openproject: Issue tracking، roadmap و مدیریت پروژه.
+  jira-taiga: مدیریت پروژه Agile برای Scrum و Kanban.
+  asana-openproject: برنامه‌ریزی پروژه، taskها و timelineها.
+  asana-leantime: مدیریت پروژه و محصول.
+  trello-wekan: بوردهای Kanban.
+  trello-kanboard: Kanban مینیمال و self-hosted.
+  miro-excalidraw: وایت‌بورد مشارکتی با سبک sketch.
+  lucidchart-diagrams-net: دیاگرام، فلوچارت و ترسیم معماری.
+  microsoft-visio-diagrams-net: رسم عمومی دیاگرام و فلوچارت.
+  dropbox-nextcloud: فایل، sync، اشتراک‌گذاری و همکاری به‌صورت self-hosted.
+  google-drive-nextcloud: پلتفرم sync و اشتراک فایل همراه با appها.
+  onedrive-nextcloud: فضای ابری خصوصی و همکاری.
+  dropbox-syncthing: همگام‌سازی پیوسته Peer-to-peer؛ فضای cloud میزبانی‌شده نیست.
+  google-photos-immich: بکاپ و مرور عکس و ویدئو به‌صورت self-hosted.
+  icloud-photos-immich: کتابخانه عکس و ویدئوی self-hosted.
+  plex-jellyfin: مدیا سرور self-hosted همراه با clientها.
+  youtube-peertube: انتشار ویدئو به‌صورت federated یا self-hosted.
+  spotify-self-hosted-library-use-case-navidrome: کتابخانه موسیقی شخصی شما را استریم می‌کند؛ کاتالوگ تجاری موسیقی ندارد.
+  1password-keepassxc: دیتابیس رمز عبور Local/Offline با یکپارچگی مرورگر.
+  1password-bitwarden: کلاینت و سرور core متن‌باز همراه با ماژول‌های تجاری.
+  lastpass-vaultwarden: سرور self-hosted سبک و سازگار با Bitwarden.
+  lastpass-keepassxc: مدیریت credential به‌صورت Offline-first.
+  auth0-keycloak: مدیریت هویت و دسترسی، SSO، OIDC و SAML.
+  okta-keycloak: IAM و SSO با قابلیت self-hosting.
+  teamviewer-rustdesk: Remote desktop با قابلیت self-hosting.
+  anydesk-rustdesk: Remote desktop با زیرساخت self-hosted اختیاری.
+  teamviewer-meshcentral: مدیریت دستگاه‌های راه دور از طریق وب.
+  microsoft-remote-desktop-manager-remmina: کلاینت Remote desktop چندپروتکلی.
+  sublime-text-kate: ویرایشگر متن قدرتمند همراه با ابزارهای توسعه.
+  sublime-text-geany: ویرایشگر و IDE سبک برای برنامه‌نویسی.
+  visual-studio-code-microsoft-distribution-vscodium: buildهای کامیونیتی از codebase متن‌باز VS Code بدون branding مایکروسافت و با پیش‌فرض‌های telemetry متفاوت.
+  postman-bruno: کلاینت API مناسب Git و collectionهای تست.
+  postman-hoppscotch: محیط وب‌محور برای توسعه API.
+  insomnia-bruno: کلاینت دسکتاپ API با collectionهای متنی ساده.
+  github-forgejo: Git forge قابل self-host با issue، PR و اکوسیستم CI.
+  github-gitea: سرویس Git سبک و self-hosted.
+  github-gitlab-community-edition: Git forge و پلتفرم DevOps یکپارچه.
+  docker-desktop-podman: کانتینرهای daemonless و گردش‌کار سازگار با Docker.
+  docker-desktop-rancher-desktop: Kubernetes و کانتینر روی دسکتاپ.
+  docker-desktop-colima: کانتینر و Kubernetes سبک روی macOS و Linux.
+  terraform-enterprise-terraform-cli-post-bsl-opentofu: Infrastructure as Code سازگار با Terraform و community-driven.
+  oracle-database-postgresql: پایگاه‌داده رابطه‌ای پیشرفته با اکوسیستم بزرگ extensionها.
+  microsoft-sql-server-postgresql: پایگاه‌داده رابطه‌ای همه‌منظوره.
+  oracle-database-mariadb: پایگاه‌داده رابطه‌ای متن‌باز محبوب از خانواده سازگار با MySQL.
+  snowflake-clickhouse: پایگاه‌داده تحلیلی columnar با کارایی بالا.
+  bigquery-clickhouse: تحلیل OLAP به‌صورت columnar.
+  bigquery-duckdb: موتور SQL تحلیلی embedded و بسیار مناسب برای تحلیل محلی.
+  trino-starburst-enterprise-trino: موتور کوئری SQL توزیع‌شده.
+  redis-enterprise-features-valkey: دیتاستور In-memory متن‌باز مشتق‌شده از Redis.
+  elasticsearch-opensearch: موتور توزیع‌شده جست‌وجو و analytics.
+  algolia-meilisearch: جست‌وجوی Full-text با تمرکز بر تجربه توسعه‌دهنده.
+  tableau-apache-superset: داشبورد BI، کاوش SQL و مصورسازی.
+  power-bi-metabase: BI و داشبورد قابل‌دسترس؛ کد enterprise مجوز جداگانه دارد.
+  tableau-redash: کوئری SQL، داشبورد و اشتراک‌گذاری.
+  google-analytics-matomo: آنالیتیکس وب با self-hosting و کنترل بیشتر روی حریم خصوصی.
+  google-analytics-plausible-analytics: آنالیتیکس سبک و privacy-friendly.
+  google-analytics-umami: آنالیتیکس وب ساده با تمرکز بر حریم خصوصی.
+  datadog-grafana: رابط داشبورد و observability؛ باید با backendهای متریک، لاگ یا trace ترکیب شود.
+  datadog-prometheus: جمع‌آوری متریک، query و alerting.
   sentry-glitchtip: ردیابی خطا و مانیتورینگ uptime.
-  heroku-dokku: استقرار اپلیکیشن روی سرور شخصی با تجربه نزدیک به PaaS.
-  heroku-caprover: استقرار اپلیکیشن روی سرور شخصی با تجربه نزدیک به PaaS.
-  vercel-coolify: استقرار اپلیکیشن روی سرور شخصی با تجربه نزدیک به PaaS.
-  netlify-coolify: استقرار اپلیکیشن روی سرور شخصی با تجربه نزدیک به PaaS.
-  vmware-vsphere-proxmox-ve: مجازی‌سازی ماشین‌ها و مدیریت hypervisor.
-  citrix-hypervisor-xcp-ng: مجازی‌سازی ماشین‌ها و مدیریت hypervisor.
-  vmware-workstation-qemu: مجازی‌سازی ماشین‌ها و مدیریت hypervisor.
-  vmware-workstation-virt-manager: مجازی‌سازی ماشین‌ها و مدیریت hypervisor.
-  salesforce-suitecrm: مدیریت مشتری، فروش و فرایندهای کسب‌وکار.
-  salesforce-erpnext: مدیریت مشتری، فروش و فرایندهای کسب‌وکار.
-  hubspot-odoo-community: مدیریت مشتری، فروش و فرایندهای کسب‌وکار.
-  zendesk-zammad: Helpdesk، inbox و پشتیبانی مشتری.
-  intercom-chatwoot: Helpdesk، inbox و پشتیبانی مشتری.
-  quickbooks-gnucash: حسابداری برای کاربران و کسب‌وکارهای کوچک.
-  shopify-woocommerce: زیرساخت فروشگاه آنلاین و تجارت الکترونیک.
-  shopify-medusa: زیرساخت فروشگاه آنلاین و تجارت الکترونیک.
-  shopify-saleor: زیرساخت فروشگاه آنلاین و تجارت الکترونیک.
-  mailchimp-mautic: خبرنامه، کمپین و اتوماسیون ایمیل.
-  mailchimp-listmonk: خبرنامه، کمپین و اتوماسیون ایمیل.
-  typeform-limesurvey: ساخت فرم و نظرسنجی با امکان میزبانی شخصی.
-  squarespace-wordpress: مدیریت و انتشار محتوای وب.
-  wix-wordpress: مدیریت و انتشار محتوای وب.
-  medium-ghost: انتشار محتوا، عضویت و خبرنامه.
-  contentful-strapi: CMS هدلس با API برای تیم‌های توسعه.
-  contentful-payload: CMS هدلس با API برای تیم‌های توسعه.
-  webflow-cms-use-case-drupal: مدیریت و انتشار محتوای وب.
-  webflow-visual-builder-use-case-grapesjs: یک فریم‌ورک برای ساخت page builder بصری است، نه یک SaaS آماده مثل Webflow.
-  circle-community-platforms-discourse: انجمن گفت‌وگو و مدیریت کامیونیتی.
-  retool-appsmith: ساخت سریع ابزارهای داخلی و پنل‌های مدیریتی.
-  retool-tooljet: ساخت سریع ابزارهای داخلی و پنل‌های مدیریتی.
-  matlab-gnu-octave: محاسبات عددی با سازگاری قابل‌توجه با گردش‌کار MATLAB.
-  mathematica-sagemath: جبر نمادین و محاسبات ریاضی.
-  mathematica-maxima: جبر نمادین و محاسبات ریاضی.
-  ibm-spss-statistics-gnu-pspp: تحلیل آماری و اکوسیستم علم داده.
-  sas-r: تحلیل آماری و اکوسیستم علم داده.
-  arcgis-pro-qgis: تحلیل و ویرایش داده‌های مکانی و GIS.
-  arcgis-grass-gis: تحلیل و ویرایش داده‌های مکانی و GIS.
-  mapbox-gl-js-proprietary-generations-maplibre-gl-js: ساخت نقشه تعاملی در وب برای توسعه‌دهندگان.
-  google-maps-javascript-api-openlayers: کتابخانه نقشه وب؛ برای داده و tile معمولاً سرویس جداگانه لازم است.
-  google-maps-javascript-api-leaflet: کتابخانه سبک نقشه تعاملی؛ داده و tile provider را جداگانه انتخاب می‌کنید.
-  zapier-huginn: ساخت گردش‌کار و اتوماسیون مبتنی بر event.
-  zapier-node-red: ساخت گردش‌کار و اتوماسیون مبتنی بر event.
-  microsoft-power-automate-node-red: ساخت گردش‌کار و اتوماسیون مبتنی بر event.
-  ifttt-home-assistant: اتوماسیون خانه هوشمند با تمرکز بر کنترل محلی.
-  cyberlink-powerdvd-vlc-media-player: پخش‌کننده چندسکویی با پشتیبانی گسترده از codec، فایل و streaming.
-  elmedia-player-pro-mpv: پخش‌کننده مینیمال و قابل اسکریپت با گردش‌کار بیشتر مبتنی بر CLI.
-  lm-studio-ollama: مدل‌های زبانی را محلی اجرا می‌کند و از طریق CLI و API محلی در دسترس می‌گذارد.
-  github-copilot-continue: افزونه متن‌باز کدنویسی AI برای IDEهای پشتیبانی‌شده؛ مدل یا provider را جداگانه تنظیم می‌کنید.
+  heroku-dokku: PaaS مبتنی بر git-push روی سرور خودتان.
+  heroku-caprover: پلتفرم self-hosted اپلیکیشن مبتنی بر Docker.
+  vercel-coolify: پلتفرم استقرار اپلیکیشن با قابلیت self-hosting.
+  netlify-coolify: استقرار self-hosted اپلیکیشن با integrationهای Git.
+  vmware-vsphere-proxmox-ve: پلتفرم مجازی‌سازی مبتنی بر KVM و LXC.
+  citrix-hypervisor-xcp-ng: پلتفرم مجازی‌سازی مبتنی بر Xen.
+  vmware-workstation-qemu: شبیه‌سازی ماشین و مجازی‌سازی.
+  vmware-workstation-virt-manager: رابط دسکتاپ برای libvirt، QEMU و KVM.
+  salesforce-suitecrm: CRM برای فروش، حساب‌ها و گردش‌کارها.
+  salesforce-erpnext: مجموعه ERP همراه با CRM، حسابداری، انبار و امکانات دیگر.
+  hubspot-odoo-community: اپ‌های ERP، CRM و کسب‌وکار همراه با افزونه‌های enterprise اختصاصی.
+  zendesk-zammad: پلتفرم Helpdesk و پشتیبانی مشتری.
+  intercom-chatwoot: inbox پیام‌رسانی مشتری و پشتیبانی.
+  quickbooks-gnucash: حسابداری دسکتاپ برای افراد و کسب‌وکارهای کوچک.
+  shopify-woocommerce: تجارت متن‌باز روی WordPress.
+  shopify-medusa: پلتفرم Headless commerce.
+  shopify-saleor: تجارت Headless مبتنی بر GraphQL.
+  mailchimp-mautic: اتوماسیون بازاریابی و کمپین‌ها.
+  mailchimp-listmonk: خبرنامه و mailing list با کارایی بالا.
+  typeform-limesurvey: فرم‌ها و نظرسنجی‌های self-hosted.
+  squarespace-wordpress: انتشار وب‌سایت و CMS توسعه‌پذیر.
+  wix-wordpress: اکوسیستم عمومی وب‌سایت و CMS.
+  medium-ghost: انتشار محتوا، خبرنامه و عضویت.
+  contentful-strapi: Headless CMS همراه با API.
+  contentful-payload: Headless CMS با تمرکز بر توسعه‌دهندگان.
+  webflow-cms-use-case-drupal: CMS قدرتمند؛ گردش‌کار طراحی بصری با Webflow متفاوت است.
+  webflow-visual-builder-use-case-grapesjs: فریم‌ورکی برای ساخت visual web builderها.
+  circle-community-platforms-discourse: پلتفرم discussion برای کامیونیتی.
+  retool-appsmith: ابزارهای داخلی و پنل‌های مدیریتی.
+  retool-tooljet: ابزارهای داخلی Low-code.
+  matlab-gnu-octave: محاسبات عددی با سازگاری زبانی شبیه MATLAB.
+  mathematica-sagemath: جبر رایانه‌ای، ریاضیات و محاسبات علمی.
+  mathematica-maxima: سیستم جبر رایانه‌ای.
+  ibm-spss-statistics-gnu-pspp: تحلیل آماری با گردش‌کاری شبیه SPSS.
+  sas-r: اکوسیستم محاسبات آماری و تحلیل داده.
+  arcgis-pro-qgis: GIS دسکتاپ همراه با pluginها و پشتیبانی گسترده از داده.
+  arcgis-grass-gis: تحلیل ژئواسپیشال و پردازش raster و vector.
+  mapbox-gl-js-proprietary-generations-maplibre-gl-js: رندر متن‌باز نقشه‌های برداری تحت وب.
+  google-maps-javascript-api-openlayers: کتابخانه نقشه وب؛ باید با providerهای بازِ نقشه یا داده ترکیب شود.
+  google-maps-javascript-api-leaflet: نقشه‌های تعاملی سبک برای وب.
+  zapier-huginn: agentهای self-hosted و اتوماسیون event-based.
+  zapier-node-red: اتوماسیون و integrationهای Flow-based.
+  microsoft-power-automate-node-red: گردش‌کارهای بصری و event-driven.
+  ifttt-home-assistant: اتوماسیون خانه هوشمند Local-first.
+  cyberlink-powerdvd-vlc-media-player: پخش چندسکویی با پشتیبانی گسترده از codecها، فایل‌ها و streaming.
+  elmedia-player-pro-mpv: پخش‌کننده مینیمال و scriptable با پشتیبانی عالی از فرمت‌ها و گردش‌کار CLI-first.
+  lm-studio-ollama: اجرای و سرو مدل‌های زبانی محلی از طریق CLI ساده و API محلی.
+  github-copilot-continue: افزونه متن‌باز کدنویسی AI برای IDEهای پشتیبانی‌شده؛ مدل یا provider جداگانه پیکربندی می‌شود.

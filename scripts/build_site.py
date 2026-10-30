@@ -18,7 +18,7 @@ from catalog import (
 
 SOURCE = ROOT / "website"
 DEST = ROOT / "dist"
-DEFAULT_REPO_URL = "https://github.com/fonij2002/kudos-to-open-source"
+DEFAULT_REPO_URL = "https://github.com/fonij2002/go-open-source"
 SCHEMA_VERSION = 2
 
 
@@ -26,7 +26,7 @@ def repo_url() -> str:
     repository = os.getenv("GITHUB_REPOSITORY", "").strip()
     if repository and "/" in repository:
         return f"https://github.com/{repository}"
-    return os.getenv("KUDOS_REPO_URL", DEFAULT_REPO_URL).rstrip("/")
+    return os.getenv("REPO_URL", DEFAULT_REPO_URL).rstrip("/")
 
 
 def canonical_json(value: object) -> bytes:

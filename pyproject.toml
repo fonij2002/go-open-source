@@ -1,7 +1,7 @@
 [project]
-name = "kudos-to-open-source"
+name = "go-open-source"
 version = "0.1.0"
-description = "Add your description here"
+description = "Discover open-source alternatives to the software you pay for."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

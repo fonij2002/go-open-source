@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#0b0f14" />
-    <meta name="kudos-build" content="{{BUILD_ID}}" />
+    <meta name="go-open-source-build" content="{{BUILD_ID}}" />
     <meta
       name="description"
       content="Discover open-source alternatives to the software you pay for."
     />
-    <meta property="og:title" content="Kudos to Open Source" />
+    <meta property="og:title" content="Go Open Source" />
     <meta
       property="og:description"
       content="Discover open-source alternatives to the software you pay for."
     />
     <meta property="og:type" content="website" />
-    <title>Kudos to Open Source</title>
-
+    <title>Go Open Source</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -31,7 +30,7 @@
       class="visually-hidden-focusable position-fixed top-0 start-0 m-2 btn btn-dark z-3"
       href="#results"
       data-i18n="skip"
-    >Skip to results</a>
+    ></a>
 
     <header class="site-header sticky-top border-bottom">
       <nav class="navbar navbar-expand py-2">
@@ -41,16 +40,19 @@
             href="./"
             data-i18n-aria-label="brand_label"
           >
-            <span
-              class="brand-mark d-inline-grid place-items-center rounded-3"
+            <img
+              src="assets/favicon.svg"
+              class="brand-logo"
+              alt="go-open-source-logo"
               aria-hidden="true"
-            >⌁</span>
-            <span class="d-none d-sm-inline">Kudos to Open Source</span>
+            />
+
+            <span class="d-none d-sm-inline">Go Open Source</span>
           </a>
 
-          <div class="d-flex align-items-center gap-2 ms-auto">
+          <div class="nav-actions d-flex align-items-center gap-2">
             <label class="mb-0">
-              <span class="visually-hidden" data-i18n="language">Language</span>
+              <span class="visually-hidden" data-i18n="language"></span>
               <select
                 id="language-select"
                 class="form-select form-select-sm"
@@ -68,7 +70,9 @@
               title="GitHub"
             >
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-                <path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.24c-3.23.7-3.91-1.37-3.91-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.39.97.1-.75.41-1.27.74-1.56-2.58-.29-5.29-1.29-5.29-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.16 1.18A10.9 10.9 0 0 1 12 6.08c.98 0 1.96.13 2.88.39 2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.41-2.72 5.39-5.3 5.68.42.36.79 1.07.79 2.16v3.26c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .7Z" />
+                <path
+                  d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.24c-3.23.7-3.91-1.37-3.91-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.39.97.1-.75.41-1.27.74-1.56-2.58-.29-5.29-1.29-5.29-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.16 1.18A10.9 10.9 0 0 1 12 6.08c.98 0 1.96.13 2.88.39 2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.41-2.72 5.39-5.3 5.68.42.36.79 1.07.79 2.16v3.26c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .7Z"
+                />
               </svg>
             </a>
 
@@ -103,7 +107,9 @@
               >
                 <circle cx="12" cy="12" r="4" />
                 <path d="M12 2v2M12 20v2M2 12h2M20 12h2" />
-                <path d="m4.93 4.93 1.41 1.41m11.32 11.32 1.41 1.41m-12.73 0-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                <path
+                  d="m4.93 4.93 1.41 1.41m11.32 11.32 1.41 1.41m-12.73 0-1.41 1.41M19.07 4.93l-1.41 1.41"
+                />
               </svg>
             </button>
           </div>
@@ -113,32 +119,40 @@
 
     <main>
       <section class="container py-4 py-md-5">
-        <div class="hero-scene rounded-5 overflow-hidden position-relative text-center px-3 px-md-5 py-5">
-          <div class="hero-applause" id="hero-applause" aria-hidden="true"></div>
-          <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
-          <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+        <div
+          class="hero-scene rounded-5 overflow-hidden position-relative text-center px-3 px-md-5 py-5"
+        >
+          <div class="hero-orbit hero-orbit-start" aria-hidden="true"></div>
+          <div class="hero-orbit hero-orbit-end" aria-hidden="true"></div>
+          <div class="hero-dot hero-dot-start" aria-hidden="true"></div>
+          <div class="hero-dot hero-dot-end" aria-hidden="true"></div>
 
           <div class="hero-content position-relative mx-auto py-md-4">
+            <h1 class="display-2 fw-bold lh-1 mb-3">
+              <span class="d-block" data-i18n="hero_title_1"></span>
+              <span class="d-block" data-i18n="hero_title_2"></span>
+            </h1>
+
+            <p class="hero-copy fs-5 mb-0 mx-auto" data-i18n="hero_copy"></p>
+
             <div
-              class="eyebrow badge rounded-pill fw-semibold px-3 py-2 mb-3"
-              data-i18n="eyebrow"
-            >Open-source first</div>
-
-            <h1
-              class="display-2 fw-bold lh-1 mb-3"
-              data-i18n="hero_title"
-            >Can’t afford it? Run your own.</h1>
-
-            <p
-              class="hero-copy fs-5 mb-0 mx-auto"
-              data-i18n="hero_copy"
-            >Discover open-source alternatives to the software you pay for.</p>
-
-            <div class="hero-search input-group input-group-lg mx-auto mt-4 mt-md-5">
+              class="hero-search input-group input-group-lg mx-auto mt-4 mt-md-5"
+            >
               <span class="input-group-text border-end-0" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none">
-                  <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
-                  <path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <circle
+                    cx="11"
+                    cy="11"
+                    r="7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="m20 20-4-4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
                 </svg>
               </span>
               <input
@@ -149,7 +163,7 @@
                 spellcheck="false"
                 data-i18n-placeholder="search_placeholder"
                 data-i18n-aria-label="search_label"
-                placeholder="Search Figma, CapCut, Photoshop, Postman…"
+                placeholder="Enter a software name …"
                 aria-label="Search alternatives"
               />
             </div>
@@ -158,29 +172,96 @@
       </section>
 
       <section class="container pb-5" aria-labelledby="catalog-heading">
-        <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
-          <h2 id="catalog-heading" class="h3 fw-bold mb-0" data-i18n="catalog">Catalog</h2>
+        <div
+          class="d-flex align-items-center justify-content-between gap-3 mb-3"
+        >
+          <div>
+            <h2
+              id="catalog-heading"
+              class="h3 fw-bold mb-1"
+              data-i18n="catalog"
+            ></h2>
+            <p
+              id="result-summary"
+              class="small text-body-secondary mb-0"
+              aria-live="polite"
+            ></p>
+          </div>
           <button
             id="clear-filters"
             class="btn btn-outline-secondary btn-sm"
             type="button"
             hidden
             data-i18n="clear_filters"
-          >Clear filters</button>
+          ></button>
         </div>
 
         <div class="row g-3 mb-4" aria-label="Catalog filters">
           <div class="col-12 col-md-6">
-            <label class="form-label small fw-semibold text-body-secondary" for="category-filter" data-i18n="category">Category</label>
+            <label
+              class="form-label small fw-semibold text-body-secondary"
+              for="category-filter"
+              data-i18n="category"
+            ></label>
             <select id="category-filter" class="form-select"></select>
           </div>
           <div class="col-12 col-md-6">
-            <label class="form-label small fw-semibold text-body-secondary" for="platform-filter" data-i18n="platform">Platform</label>
+            <label
+              class="form-label small fw-semibold text-body-secondary"
+              for="platform-filter"
+              data-i18n="platform"
+            ></label>
             <select id="platform-filter" class="form-select"></select>
           </div>
         </div>
 
-        <div id="active-query" class="small text-body-secondary mb-3" hidden></div>
+        <div
+          id="active-query"
+          class="small text-body-secondary mb-3"
+          hidden
+        ></div>
+
+        <!-- Comparison mode: shown only when a proprietary product resolves to 2+ alternatives. -->
+        <section
+          id="comparison-section"
+          class="comparison-section mb-4"
+          hidden
+          aria-labelledby="comparison-title"
+        >
+          <div
+            class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-2 mb-3"
+          >
+            <div>
+              <h3 id="comparison-title" class="h4 fw-bold mb-1"></h3>
+              <p id="comparison-intro" class="text-body-secondary mb-0"></p>
+            </div>
+            <span
+              id="comparison-count"
+              class="badge text-bg-success-subtle text-success-emphasis border border-success-subtle rounded-pill"
+            ></span>
+          </div>
+
+          <div
+            class="comparison-panel bg-body border rounded-4 shadow-sm overflow-hidden"
+          >
+            <div class="table-responsive d-none d-md-block">
+              <table class="table comparison-table align-middle mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col" data-i18n="alternative"></th>
+                    <th scope="col" data-i18n="best_for"></th>
+                    <th scope="col" data-i18n="runs_on"></th>
+                    <th scope="col" data-i18n="limitations"></th>
+                    <th scope="col" class="text-end" data-i18n="actions"></th>
+                  </tr>
+                </thead>
+                <tbody id="comparison-body"></tbody>
+              </table>
+            </div>
+            <div id="comparison-cards" class="d-md-none"></div>
+          </div>
+        </section>
+
         <div id="results" class="row g-3" tabindex="-1"></div>
 
         <div
@@ -188,17 +269,21 @@
           class="empty-state text-center bg-body border rounded-4 p-5"
           hidden
         >
-          <div class="display-6 text-success mb-2" aria-hidden="true">⌁</div>
-          <h3 class="h5" data-i18n="no_matches">No matches found</h3>
-          <p class="text-body-secondary mb-3" data-i18n="no_matches_help">Try a broader search or clear one of the filters.</p>
-          <button class="btn btn-success" id="empty-clear" type="button" data-i18n="clear_filters">Clear filters</button>
+          <h3 class="h5" data-i18n="no_matches"></h3>
+          <p class="text-body-secondary mb-3" data-i18n="no_matches_help"></p>
+          <button
+            class="btn btn-success"
+            id="empty-clear"
+            type="button"
+            data-i18n="clear_filters"
+          ></button>
         </div>
       </section>
     </main>
 
     <footer class="border-top py-4 text-body-secondary">
       <div class="container small">
-        <p class="mb-0" data-i18n="footer">What do we build for, if not to lessen each other’s hardship?</p>
+        <p class="mb-0" data-i18n="footer"></p>
       </div>
     </footer>
 
@@ -207,38 +292,60 @@
         <article class="card h-100 border shadow-sm rounded-4">
           <div class="card-body d-flex flex-column p-4">
             <div class="mb-3">
-              <span class="category-pill badge rounded-pill border text-body-secondary fw-semibold"></span>
+              <span
+                class="category-pill badge rounded-pill border text-body-secondary fw-semibold"
+              ></span>
             </div>
-
             <div class="mapping row g-2 align-items-center mb-3">
               <div class="col-12 col-md">
-                <span class="mapping-label d-block small text-body-secondary text-uppercase fw-semibold"></span>
+                <span
+                  class="mapping-label d-block small text-body-secondary text-uppercase fw-semibold"
+                ></span>
                 <h3 class="proprietary h6 fw-bold mb-0"></h3>
               </div>
-
-              <div class="col-12 col-md-auto text-body-secondary mapping-arrow" aria-hidden="true">→</div>
-
+              <div
+                class="col-12 col-md-auto text-body-secondary mapping-arrow"
+                aria-hidden="true"
+              >
+                →
+              </div>
               <div class="col-12 col-md">
-                <span class="mapping-label mapping-try d-block small text-body-secondary text-uppercase fw-semibold"></span>
-                <a class="project fw-bold text-success-emphasis text-decoration-none" target="_blank" rel="noopener noreferrer"></a>
+                <span
+                  class="mapping-label mapping-try d-block small text-body-secondary text-uppercase fw-semibold"
+                ></span
+                ><a
+                  class="project fw-bold text-success-emphasis text-decoration-none"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ></a>
               </div>
             </div>
-
             <p class="notes text-body-secondary mb-3"></p>
-
             <div class="mb-3">
-              <span class="runs-on-label d-block small fw-semibold text-body-secondary mb-2"></span>
+              <span
+                class="runs-on-label d-block small fw-semibold text-body-secondary mb-2"
+              ></span>
               <div class="platforms d-flex flex-wrap gap-2"></div>
             </div>
-
             <div class="mb-4 limitation-block">
-              <span class="limitations-label d-block small fw-semibold text-body-secondary mb-2"></span>
+              <span
+                class="limitations-label d-block small fw-semibold text-body-secondary mb-2"
+              ></span>
               <div class="limitation-tags d-flex flex-wrap gap-2"></div>
             </div>
-
-            <div class="card-actions d-flex flex-wrap gap-2 mt-auto pt-3 border-top">
-              <a class="setup-link btn btn-sm btn-success" target="_blank" rel="noopener noreferrer"></a>
-              <a class="visit btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer"></a>
+            <div
+              class="card-actions d-flex flex-wrap gap-2 mt-auto pt-3 border-top"
+            >
+              <a
+                class="setup-link btn btn-sm btn-success"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a
+              ><a
+                class="visit btn btn-sm btn-outline-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
             </div>
           </div>
         </article>

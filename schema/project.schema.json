@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Kudos to Open Source project",
+  "title": "Go Open Source project",
   "type": "object",
   "required": [
     "id",
